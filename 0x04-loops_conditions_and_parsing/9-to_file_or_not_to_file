@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Bash script that gives you information about the school file.
+
+for i in dir/*;
+do
+    if [ "$i" == "school" ];
+    then
+        echo "school file exists"
+    else
+        echo "school file does not exist"
+    fi
+done
