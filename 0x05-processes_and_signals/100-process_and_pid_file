@@ -6,16 +6,14 @@
 # Deletes the file /var/run/myscript.pid
 # and terminates itself when receiving a SIGQUIT or SIGTERM signal
 
-mkdir var && cd var && mkdir run && touch run/myscript.pid
-
-echo $$ > run/myscript.pid
+echo $$ > var/run/myscript.pid
 
 while true
 do
     echo "To infinity and beyond"
     sleep 2
-    trap "echo I hate the kill" SIGTERM
+    trap "echo I hate the kill command; rm /var/run/myscript.pid; exit" SIGTERM
     trap "echo Y U no love me?!" SIGINT
+    trap "rm /var/run/myscript.pid; exit" SIGQUIT
 done
 
-rm /var/run/myscript.pid
