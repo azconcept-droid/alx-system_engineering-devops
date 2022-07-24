@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays the visitor IP
+# along with the HTTP status code from the Apache log file.
+
+# Requirement:
+
+# Format: IP HTTP_CODE
+# Example: 185.130.5.207 301
+
+awk '{ print $1,$9 }' apache-access.log
