@@ -16,4 +16,3 @@ do
     trap "echo Y U no love me?!" SIGINT
     trap "rm /var/run/myscript.pid; exit" SIGQUIT
 done
-
