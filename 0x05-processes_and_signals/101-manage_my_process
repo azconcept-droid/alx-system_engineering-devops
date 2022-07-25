@@ -25,14 +25,14 @@ noarg ()
     echo "Usage: manage_my_process {start|stop|restart}"
 }
 case "$1" in
-        "start")
-            start
-            echo "manage_my_process started";;
-        "stop")
-            stop
-            echo "manage_my_process stopped";;
-        "restart")
-            restart;;
-        *)
-            noarg;;
+    start)
+        start
+        echo "manage_my_process started";;
+    stop)
+        stop
+        echo "manage_my_process stopped";;
+    restart)
+        restart;;
+    *)
+        noarg;;
 esac
