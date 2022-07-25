@@ -7,6 +7,7 @@ int infinite_while(void);
 /**
  * main - Entry point
  *
+ * Description: Create 5 zombie processess.
  * Return: 0.
  */
 int main(void)
@@ -35,7 +36,7 @@ int main(void)
 }
 
 /**
- * infinite_while - infinite while loop
+ * infinite_while - sleep process for 1 sec
  *
  * Return: 0.
  */
