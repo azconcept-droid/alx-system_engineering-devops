@@ -4,6 +4,7 @@
 start ()
 {
     ./manage_my_process &
+    sudo touch /var/run/my_process.pid
     echo $! > /var/run/my_process.pid
 }
 
@@ -34,5 +35,6 @@ case "$1" in
     restart)
         restart;;
     *)
-        noarg;;
+        noarg
+        exit 1;;
 esac
