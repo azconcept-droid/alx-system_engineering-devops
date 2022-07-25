@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # This is a Bash (init) script that manages manage_my_process script
-. /lib/lsb/init-functions
 
 start ()
 {
