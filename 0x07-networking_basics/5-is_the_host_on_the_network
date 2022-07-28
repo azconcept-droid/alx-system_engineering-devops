@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script displays listening ports, PID nd programme name
+# This script pings an IP address passed as an argument.
 
 if [ $# -ne 1 ]
 then
