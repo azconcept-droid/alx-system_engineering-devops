@@ -1,5 +1,5 @@
 #!usr/bin/env bash
 # script to start apache2 running
-# Fix my server with these magic line
+# Fix my server with these line
 
 sudo service apache2 start
