@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Install nginx on my web-01
 
-sudo adduser newubuntu
-sudo usermod -aG sudo newubuntu
-su - newubuntu
-sudo apt-get install nginx -y
-
+apt-get update
+apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+service nginx restart
