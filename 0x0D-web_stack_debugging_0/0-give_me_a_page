@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 # script to start apache2 running
 # Fix my server with these line
 
