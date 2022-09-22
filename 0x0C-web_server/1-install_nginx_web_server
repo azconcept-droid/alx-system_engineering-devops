@@ -4,5 +4,5 @@
 sudo adduser newubuntu
 sudo usermod -aG sudo newubuntu
 su - newubuntu
-sudo apt-get install nginx
+sudo apt-get install nginx -y
 
