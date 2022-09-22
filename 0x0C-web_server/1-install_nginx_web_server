@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # Install nginx on my web-01
 
+sudo adduser newubuntu
+sudo usermod -aG sudo newubuntu
+su - newubuntu
 sudo apt-get install nginx
