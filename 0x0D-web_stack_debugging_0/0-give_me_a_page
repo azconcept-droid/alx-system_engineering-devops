@@ -2,5 +2,4 @@
 # script to start apache2 running
 # Fix my server with these line
 
-sudo service apache2 status
 sudo service apache2 start
