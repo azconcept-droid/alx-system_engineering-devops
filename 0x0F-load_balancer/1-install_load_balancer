@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script configures HAproxy in my web servers web-01 and web-02
+
+apt-get install --no-install-recommends software-properties-common
+add-apt-repository ppa:vbernat/haproxy-2.0
+apt-get install haproxy=2.0.\*
