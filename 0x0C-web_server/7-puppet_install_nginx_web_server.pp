@@ -1,3 +1,5 @@
+# Install puppet and nginx with custom body and redirect 
+
 exec { 'update_ubuntu':
   command =>     'apt-get update',
   path    =>      ['/usr/bin/', '/usr/sbin'],
