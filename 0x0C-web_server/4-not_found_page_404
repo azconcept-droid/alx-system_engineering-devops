@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Redirect to custom 404 page
 
-apt-get update
+apt-get -y update
 apt-get -y install nginx
 touch /usr/share/nginx/html/custom_404.html
 chmod 666 /usr/share/nginx/html/custom_404.html
