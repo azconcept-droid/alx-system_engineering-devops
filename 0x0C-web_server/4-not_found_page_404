@@ -3,6 +3,7 @@
 
 apt-get -y update
 apt-get -y install nginx
+ufw allow nginx 'Nginx HTTPS'
 touch /usr/share/nginx/html/custom_404.html
 chmod 666 /usr/share/nginx/html/custom_404.html
 echo "Ceci n'est pas une page\n" > /usr/share/nginx/html/custom_404.html
