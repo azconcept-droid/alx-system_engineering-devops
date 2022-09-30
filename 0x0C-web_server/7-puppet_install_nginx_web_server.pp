@@ -1,15 +1,5 @@
 # Install puppet and nginx with custom body and redirect 
 
-exec { 'update_ubuntu':
-  command =>     'apt-get update',
-  path    =>      ['/usr/bin/', '/usr/sbin'],
-}
-
-package { 'puppet':
-  ensure   =>    '5.5.10',
-  provider =>    'gem',
-}
-
 package { 'nginx':
   ensure   =>    '1.18.0',
   provider =>    'apt-get',
