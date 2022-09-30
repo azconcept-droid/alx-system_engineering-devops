@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get -y install nginx
 sudo touch /usr/share/nginx/html/custom_404.html
 sudo chmod 666 /usr/share/nginx/html/custom_404.html
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+echo "Ceci n'est pas une page\n" > /usr/share/nginx/html/custom_404.html
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo sed -i 's+_;+_;\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t+g' /etc/nginx/sites-available/default
 sudo nginx -s reload
