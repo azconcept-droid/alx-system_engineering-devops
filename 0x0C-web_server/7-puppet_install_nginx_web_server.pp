@@ -10,9 +10,9 @@ package { 'puppet':
   provider =>    'gem',
 }
 
-exec { 'install_nginx':
-  path    =>    ['/usr/bin/', '/usr/sbin'],
-  command =>    'apt-get install -y nginx',
+package { 'nginx':
+  ensure   =>    '1.18.0',
+  provider =>    'apt-get',
 }
 
 exec { 'custom_body':
