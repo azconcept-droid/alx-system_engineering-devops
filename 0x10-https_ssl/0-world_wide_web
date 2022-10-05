@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Your Bash script must accept 2 arguments:
+# Output: The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
+
+
+func () {
+    if [ "$1" ]
+    then
+        echo "The subdomain www is a A record and points to 3.234.239.125"
+        echo "The subdomain lb-01 is a A record and points to 3.234.239.125"
+        echo "The subdomain web-01 is a A record and points to 3.236.119.138"
+        echo "The subdomain web-02 is a A record and points to 3.237.37.75"
+    fi
+
+    return 0
+}
+
+func yalect.tech
