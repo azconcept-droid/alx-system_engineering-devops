@@ -2,17 +2,25 @@
 # Your Bash script must accept 2 arguments:
 # Output: The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
 
+DOMAIN="$1"
+SUBDOMAIN="$2"
 
 func () {
-    if [ "$1" ]
+    if [ $# == 0 ]
+    then
+        echo "Usage: 0-world_wide_web DOMAIN [SUBDOMAIN]"
+    elif [ -z "$2" ]
     then
         echo "The subdomain www is a A record and points to 3.234.239.125"
         echo "The subdomain lb-01 is a A record and points to 3.234.239.125"
         echo "The subdomain web-01 is a A record and points to 3.236.119.138"
         echo "The subdomain web-02 is a A record and points to 3.237.37.75"
+    else
+        DESTINATION=$( dig "$SUBDOMAIN.$DOMAIN" | grep -A1 'ANSWER SECTION:' | awk "/^$SUBDOMAIN.$DOMAIN/ {print \$5}" )
+        RECORD_TYPE=$( dig "$SUBDOMAIN.$DOMAIN" | grep -A1 'ANSWER SECTION:' | awk "/^$SUBDOMAIN.$DOMAIN/ {print \$4}" )
+        echo "The subdomain $SUBDOMAIN is a $RECORD_TYPE record and points to $DESTINATION"
     fi
-
     return 0
 }
 
-func yalect.tech
+func "$@"
