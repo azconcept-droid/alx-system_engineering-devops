@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # This script configures HAproxy in my web servers web-01 and web-02
 
-apt-get update
-apt-get install --no-install-recommends software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.0
-apt-get install -y haproxy=2.0.\*
+sudo apt install -y software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.5
+sudo apt update
+apt install -y haproxy
 echo "ENABLED=1" >> /etc/default/haproxy
-FRONTEND="frontend Local_Server\n\tbind *:80\n\tmode http\n\tdefault_backend web-servers\n"
+FRONTEND="frontend Local_Server\n\tbind *:80\n\tdefault_backend web-servers\n"
 BACKEND="backend web-servers\n\tmode http\n\tbalance roundrobin\n\toption forwardfor"
 SERVER1="\tserver 8920-web-01 3.236.119.138:80 check"
 SERVER2="\tserver 8920-web-02 3.237.37.75:80 check"
