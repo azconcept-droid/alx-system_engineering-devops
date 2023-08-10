@@ -15,14 +15,15 @@
 # list of available options, their meanings and defaults, please see the
 # ssh_config(5) man page.
 
-Include /etc/ssh/ssh_config.d/*.conf 
+Include /etc/ssh/ssh_config.d/*.conf
+
 Host *
 #   ForwardAgent no
     ForwardX11 yes
 #   ForwardX11Trusted yes
-    PasswordAuthentication yes
+    PasswordAuthentication no
 #   HostbasedAuthentication no
-#   GSSAPIAuthentication no
+    GSSAPIAuthentication yes
 #   GSSAPIDelegateCredentials no
 #   GSSAPIKeyExchange no
 #   GSSAPITrustDNS no
@@ -31,7 +32,7 @@ Host *
 #   AddressFamily any
 #   ConnectTimeout 0
 #   StrictHostKeyChecking ask
-    IdentityFile ~/.ssh/school
+    IdentityFile ~/.ssh/id_rsa
 #   IdentityFile ~/.ssh/id_dsa
 #   IdentityFile ~/.ssh/id_ecdsa
 #   IdentityFile ~/.ssh/id_ed25519
@@ -46,4 +47,4 @@ Host *
 #   ProxyCommand ssh -q -W %h:%p gateway.example.com
 #   RekeyLimit 1G 1h
     SendEnv LANG LC_*
-    HashKnownHosts y   GSSAPIAuthentication yes
+    HashKnownHosts yes
