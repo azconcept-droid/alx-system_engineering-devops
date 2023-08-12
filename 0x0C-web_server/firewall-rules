@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# set firewall rules
+
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
+sudo ufw allow OpenSSH
+sudo ufw default deny incoming
+sudo ufw enable -y
+sudo ufw status verbose
