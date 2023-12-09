@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This script change port 8080 to port 80
-apt install nginx -y
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+apt-get update
+apt-get install nginx -y
 service nginx start
