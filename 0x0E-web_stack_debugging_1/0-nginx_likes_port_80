@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script install ans start nginx server 
+# This script install and start nginx server 
 apt-get update
 apt-get install nginx -y
 service nginx start
