@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script change port 8080 to port 80
+# This script install ans start nginx server 
 apt-get update
 apt-get install nginx -y
 service nginx start
