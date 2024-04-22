@@ -19,11 +19,12 @@ Include /etc/ssh/ssh_config.d/*.conf
 
 Host *
 #   ForwardAgent no
-    ForwardX11 yes
+#   ForwardX11 no
 #   ForwardX11Trusted yes
-    PasswordAuthentication no
 #   HostbasedAuthentication no
-    GSSAPIAuthentication yes
+#   PasswordAuthentication yes
+    PasswordAuthentication no
+#   GSSAPIAuthentication no
 #   GSSAPIDelegateCredentials no
 #   GSSAPIKeyExchange no
 #   GSSAPITrustDNS no
@@ -32,9 +33,10 @@ Host *
 #   AddressFamily any
 #   ConnectTimeout 0
 #   StrictHostKeyChecking ask
-    IdentityFile ~/.ssh/id_rsa
-#   IdentityFile ~/.ssh/id_dsa
+#   IdentityFile ~/.ssh/id_rsa
 #   IdentityFile ~/.ssh/id_ecdsa
+#   IdentityFile ~/.ssh/id_dsa
+    IdentityFile ~/.ssh/school
 #   IdentityFile ~/.ssh/id_ed25519
 #   Port 22
 #   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
@@ -48,3 +50,4 @@ Host *
 #   RekeyLimit 1G 1h
     SendEnv LANG LC_*
     HashKnownHosts yes
+    GSSAPIAuthentication yes
