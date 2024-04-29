@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script configures HAproxy in my web servers web-01 and web-02
+# This script configures HAproxy so that it send traffic to web-01 and web-02
 
 sudo apt install -y software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.5
