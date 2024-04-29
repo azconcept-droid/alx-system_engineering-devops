@@ -8,8 +8,8 @@ apt install -y haproxy
 echo "ENABLED=1" >> /etc/default/haproxy
 FRONTEND="frontend Local_Server\n\tbind *:80\n\tdefault_backend web-servers\n"
 BACKEND="backend web-servers\n\tmode http\n\tbalance roundrobin\n\toption forwardfor"
-SERVER1="\tserver 8920-web-01 3.236.119.138:80 check"
-SERVER2="\tserver 8920-web-02 3.237.37.75:80 check"
+SERVER1="\tserver 8920-web-01 18.204.16.142:80 check"
+SERVER2="\tserver 8920-web-02 54.175.223.202:80 check"
 echo -e "$FRONTEND" >> /etc/haproxy/haproxy.cfg
 echo -e "$BACKEND" >> /etc/haproxy/haproxy.cfg
 echo -e "$SERVER1" >> /etc/haproxy/haproxy.cfg
