@@ -45,5 +45,5 @@ backend letsencrypt-backend
 backend web-servers
         balance roundrobin
         option forwardfor
-        server 8920-web-01 3.236.119.138:80 check
-        server 8920-web-02 3.237.37.75:80 check
+        server 8920-web-01 18.204.16.142:80 check
+        server 8920-web-02 54.175.223.202:80 check
