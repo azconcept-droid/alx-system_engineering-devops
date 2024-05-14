@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Let nginx run as nginx user
+usermod -aG sudo nginx
+chown -R nginx:nginx /home/nginx
