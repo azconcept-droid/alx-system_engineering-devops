@@ -75,7 +75,8 @@
 # don't delete the 'COMMIT' line or these rules won't be processed
 COMMIT
 
-# port forwarding from 80 to 8080
+# port forwarding from 8080 to 80
+# goto /etc/ufw/before.rules to add this lines below
 *nat
 :PREROUTING ACCEPT [0:0]
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
