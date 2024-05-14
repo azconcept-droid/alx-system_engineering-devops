@@ -77,6 +77,9 @@ COMMIT
 
 # port forwarding from 8080 to 80
 # goto /etc/ufw/before.rules to add this lines below
+# run: sudo ufw allow 8080/tcp
+# reload ufw: sudo ufw reload
+# enable ufw: sudo ufw enable
 *nat
 :PREROUTING ACCEPT [0:0]
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
