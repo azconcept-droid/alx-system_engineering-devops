@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """This module uses REST API, for a given employee ID,
 returns information about his/her TODO list progress
-in CSV format
+in JSON format
 """
 import requests
 import sys
+import json
 
 
 if __name__ == "__main__":
@@ -22,14 +23,22 @@ if __name__ == "__main__":
 
     name = user.get('username')
     filename = "{}.json".format(user.get('id'))
+    # Prepare data
+    # {"{}": [{
+    # "task": "TASK_TITLE",
+    # "completed": TASK_COMPLETED_STATUS,
+    # "username": "USERNAME"}, ...]}
+    data = []
+    for todo in todos_list:
+        task_done = todo.get('completed')
+        task_title = todo.get('title')
 
-    # save data in csv format
+        data.append({
+            "task": task_title,
+            "completed": task_done,
+            "username": name
+        })
+
+    # Write the JSON data to a file
     with open(filename, mode='w') as file:
-        for todo in todos_list:
-            dict_list = []
-            task_done = todo.get('completed')
-            task_title = todo.get('title')
-            #"\"task\": \"{}\", \"completed\": {}, \"username\": \"{}\"".format(task_title, task_done, name)
-            dict_list.append(task_title)
-            #{"{}": [{"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"}, ...]}
-            file.write("{}".format(dict_list))
+        json.dump({id: data}, file)
