@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""This module uses REST API, for a given employee ID,
-returns information about his/her TODO list progress
+"""This module uses REST API, for a given user ID,
+records all tasks that are owned by this employee
 in JSON format
 """
+
 import requests
 import sys
 import json
