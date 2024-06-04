@@ -6,6 +6,7 @@
 ## Resources
 **Read or watch**:
 
-- [Introduction to load-balancing and HAproxy](https://alx-intranet.hbtn.io/rltoken/B7f3oz8i3Xvvom_YQZzLnQ)
-- [HTTP header](https://alx-intranet.hbtn.io/rltoken/sZ9v3Vq2tgLwN_PWVQketw)
-- [Debian/Ubuntu HAProxy packages](https://alx-intranet.hbtn.io/rltoken/2VRAgtKKR9g6Xfb0xzGiSg)
+- [Introduction to load-balancing and HAproxy](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
+- [HTTP header](https://www.techopedia.com/definition/27178/http-header)
+- [Debian/Ubuntu HAProxy packages](https://haproxy.debian.net/)
+- [HAproxy config tutorial](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/core-concepts/acls/)

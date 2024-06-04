@@ -26,6 +26,7 @@ if __name__ == "__main__":
     # {"username": "USERNAME", "task": "TASK_TITLE",
     # "completed": TASK_COMPLETED_STATUS}, ... ]}
     data = []
+    tasks = []
     for id in range(1, 11):
         users = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
         response_users = requests.get(users)
@@ -35,12 +36,16 @@ if __name__ == "__main__":
             task_done = todo.get('completed')
             task_title = todo.get('title')
 
-            data.append({
+            tasks.append({
                 "username": name,
                 "task": task_title,
                 "completed": task_done,
             })
 
+            data.append({
+                id: tasks
+            })
+
     # Write the JSON data to a file
     with open(filename, mode='w') as file:
-        json.dump({1: data}, file)
+        json.dump(data, file)
