@@ -6,6 +6,6 @@ prints the titles of the first 10 hot posts
 
 
 def top_ten(subreddit):
-    """ Reddit number of subscribers """
+    """ Get top ten posts """
 
     print("None")
