@@ -1,6 +1,11 @@
 #  0x19. Postmortem
 ``DevOps`` ``SysAdmin``
 
+**Resources**
+- [What is postmortem](https://www.pagerduty.com/resources/learn/incident-postmortem/) 
+- [Importance of postmortem](https://www.atlassian.com/incident-management/postmortem#best-practices-for-an-incident-postmortem)
+- [How to write postportem](https://sysadmincasts.com/episodes/20-how-to-write-an-incident-report-postmortem)
+
 The following is the incident report postmortem report for a failing application server that occurred on  June 10, 2024,. We understand this service issue has impacted our valued developers and users, and we apologize to everyone who was affected.
 
 ---
