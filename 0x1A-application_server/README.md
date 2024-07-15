@@ -1,6 +1,8 @@
 #  0x1A. Application server
 ``DevOps`` ``SysAdmin``
 
+![app server monitoring architecture](./app-server.jpg)
+
 **Resources**
 - [Run gunicorn](https://docs.gunicorn.org/en/latest/run.html)
 - [Understanding ngix server and location block selection](https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms#matching-location-blocks)
