@@ -1,5 +1,6 @@
 # 0x18-webstack_monitoring
 
+![web stack monitoring architecture](./monitoring.png)
 1. Sign up for Datadog and install datadog-agent
  https://www.datadoghq.com/
 
